@@ -2,15 +2,15 @@
   
   
   
-### 서버 - 클라이언트간의 직렬화된 객체 통신 구현  
+### 서버 - 클라이언트간의 직렬화된 객체 통신 초반 구현 코드  
 
-## 서버  
+## 서버 실행 순서  
 1. NettyServer의 main 함수 실행  
 2. conf/server.properties 파일을 읽어 서버 구동 세팅  
 3. NettyServerInitializer를 통해 소켓 오픈 및 연결 대기  
 4. NettyServerInboundHandler에서 클라이언트 채널에 관한 처리  
   
-## 클라이언트  
+## 클라이언트   
 1. NettyClient의 main 함수 실행  
 2. conf/client.properties 파일을 읽어 구동 세팅  
 3. NettyClientInitializer를 통해 서버 연결 요청  
