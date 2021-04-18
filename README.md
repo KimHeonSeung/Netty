@@ -1,18 +1,14 @@
-# Netty  
-  
-  
-  
-### 서버 - 클라이언트간의 직렬화된 객체 통신 초반 구현 코드  
+### Server - Client Communicating with Serialized Object  
 
-## 서버 실행 순서  
-1. NettyServer의 main 함수 실행  
-2. conf/server.properties 파일을 읽어 서버 구동 세팅  
-3. NettyServerInitializer를 통해 소켓 오픈 및 연결 대기  
-4. NettyServerInboundHandler에서 클라이언트 채널에 관한 처리  
+### Server Steps  
+1. Start with main method in NettyServer class.  
+2. Server Settings are wrote in conf/server.properties.  
+3. Socket open and wait for connection in NettyServerInitializer class.  
+4. Client Channel Handling in NettyServerInboundHandler class  
   
-## 클라이언트   
-1. NettyClient의 main 함수 실행  
-2. conf/client.properties 파일을 읽어 구동 세팅  
-3. NettyClientInitializer를 통해 서버 연결 요청  
-4. 연결 직후 특정 파일의 무결성에 관한 RequestVO 객체 전송  
-5. NettyClientInboundHandler에서 서버 채널에 관한 처리  
+### Client Steps   
+1. Start with main method in NettyClient class.  
+2. Client Settings are wrote in conf/client.properties.  
+3. Try to connect to Server in NettyClientInitializer class.  
+4. Check integrity of some files after connection established and send to server with RequestVO.  
+5. Server Channel Handling in NettyClientInboundHandler class.  
