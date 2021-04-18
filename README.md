@@ -1,5 +1,5 @@
 ### Server - Client Communicating with Serialized Object  
-
+  
 ### Server Steps  
 1. Start with main method in NettyServer class.  
 2. Server Settings are wrote in conf/server.properties.  
